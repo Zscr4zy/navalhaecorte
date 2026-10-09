@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbearia Estilo & Navalha</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+</head>
+<body>
+
+    <!-- Cabeçalho / Navegação -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fa-solid fa-scissors"></i> <span>Estilo & Navalha</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#servicos">Cortes & Preços</a></li>
+                    <li><a href="#barbeiros">Barbeiros</a></li>
+                    <li><a href="#agendamento" class="btn-nav">Agendar Horário</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1>Corte de Respeito, Atendimento de Excelência</h1>
+            <p>Seu estilo é a nossa assinatura. Agende seu horário com os melhores profissionais da região.</p>
+            <a href="#agendamento" class="btn-primary">Agende Agora</a>
+        </div>
+    </section>
+
+    <!-- Serviços & Preços -->
+    <section id="servicos" class="services">
+        <div class="container">
+            <h2 class="section-title">Nossos Cortes & Preços</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('https://unsplash.com');"></div>
+                    <div class="service-info">
+                        <h3>Corte Masculino Tradicional</h3>
+                        <p>Corte em máquina ou tesoura, lavado e finalizado com pomada.</p>
+                        <span class="price">R$ 45,00</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('https://unsplash.com');"></div>
+                    <div class="service-info">
+                        <h3>Barba Completa</h3>
+                        <p>Alinhamento de barba com toalha quente, óleo essencial e navalha.</p>
+                        <span class="price">R$ 35,00</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('https://unsplash.com');"></div>
+                    <div class="service-info">
+                        <h3>Combo: Cabelo & Barba</h3>
+                        <p>O pacote completo para dar aquele trato no visual com desconto.</p>
+                        <span class="price">R$ 70,00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Barbeiros -->
+    <section id="barbeiros" class="barbers">
+        <div class="container">
+            <h2 class="section-title">Nossos Especialistas</h2>
+            <div class="barbers-grid">
+                <div class="barber-card">
+                    <img src="https://unsplash.com" alt="Barbeiro Carlos">
+                    <h3>Carlos Silva</h3>
+                    <p class="specialty">Especialista em Degradê e Listras</p>
+                </div>
+                <div class="barber-card">
+                    <img src="https://unsplash.com" alt="Barbeiro Renato">
+                    <h3>Renato Alencar</h3>
+                    <p class="specialty">Mestre da Toalha Quente & Barba Clássica</p>
+                </div>
+                <div class="barber-card">
+                    <img src="https://unsplash.com" alt="Barbeiro Marcos">
+                    <h3>Marcos Souza</h3>
+                    <p class="specialty">Cortes Modernos & Visagismo</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulário de Agendamento -->
+    <section id="agendamento" class="booking">
+        <div class="container">
+            <h2 class="section-title">Faça seu Agendamento</h2>
+            <div class="booking-wrapper">
+                <form id="appointmentForm" class="booking-form">
+                    <div class="form-group">
+                        <label for="name">Seu Nome *</label>
+                        <input type="text" id="name" required placeholder="Digite seu nome completo">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Seu WhatsApp *</label>
+                        <input type="tel" id="phone" required placeholder="(00) 99999-9999">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="service">Escolha o Serviço *</label>
+                            <select id="service" required>
+                                <option value="" disabled selected>Selecione um serviço</option>
+                                <option value="Corte Tradicional (R$ 45,00)">Corte Tradicional - R$ 45,00</option>
+                                <option value="Barba Completa (R$ 35,00)">Barba Completa - R$ 35,00</option>
+                                <option value="Combo: Cabelo & Barba (R$ 70,00)">Combo: Cabelo & Barba - R$ 70,00</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="barber">Escolha o Barbeiro *</label>
+                            <select id="barber" required>
+                                <option value="" disabled selected>Selecione o profissional</option>
+                                <option value="Carlos Silva">Carlos Silva</option>
+                                <option value="Renato Alencar">Renato Alencar</option>
+                                <option value="Marcos Souza">Marcos Souza</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="date">Data *</label>
+                            <input type="date" id="date" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="time">Horário *</label>
+                            <select id="time" required>
+                                <option value="" disabled selected>Selecione um horário</option>
+                                <option value="09:00">09:00</option>
+                                <option value="10:00">10:00</option>
+                                <option value="11:00">11:00</option>
+                                <option value="13:00">13:00</option>
+                                <option value="14:00">14:00</option>
+                                <option value="15:00">15:00</option>
+                                <option value="16:00">16:00</option>
+                                <option value="17:00">17:00</option>
+                                <option value="18:00">18:00</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-submit">
+                        <i class="fa-brands fa-whatsapp"></i> Enviar para o WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Informações de Contato / Unidade -->
+    <section class="info-section">
+        <div class="container info-grid">
+            <div class="info-box">
+                <i class="fa-solid fa-location-dot"></i>
+                <h3>Endereço</h3>
+                <p>Av. Principal da Cidade, 123<br>Centro - RN</p>
+            </div>
+            <div class="info-box">
+                <i class="fa-solid fa-clock"></i>
+                <h3>Funcionamento</h3>
+                <p>Terça a Sábado<br>09h às 19h</p>
+            </div>
+            <div class="info-box">
+                <i class="fa-solid fa-phone"></i>
+                <h3>Contato Geral</h3>
+                <p>Fixo: (84) 3333-3333<br>contato@estiloenavalha.com</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2026 Barbearia Estilo & Navalha. Todos os direitos reservados.</p>
+            <div class="social-links">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
