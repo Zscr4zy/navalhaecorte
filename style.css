@@ -371,20 +371,50 @@ footer {
 
 /* Responsividade */
 @media (max-width: 768px) {
+    header {
+        padding: 0.8rem 0;
+    }
+
     .header-container {
-        flex-direction: column;
-        gap: 1rem;
+        flex-direction: column; /* Coloca o logo em cima e os links embaixo */
+        gap: 0.8rem;
     }
+
+    .logo {
+        font-size: 1.3rem; /* Diminui ligeiramente o tamanho do logo */
+    }
+
+    nav ul {
+        flex-wrap: wrap; /* Permite que os botões quebrem linha se faltar espaço */
+        justify-content: center;
+        gap: 0.5rem; /* Cria um espaçamento igual entre todos os botões */
+    }
+
     nav ul li {
-        margin: 0 1rem;
+        margin-left: 0; /* Remove a margem antiga que empurrava os botões */
     }
+
+    nav ul li a {
+        font-size: 0.85rem; /* Diminui o texto para caber em telas menores */
+        padding: 0.4rem 0.6rem;
+        display: inline-block;
+    }
+
+    .btn-nav {
+        border: 1px solid var(--accent);
+        padding: 0.4rem 0.8rem !important; /* Ajusta o botão de agendamento */
+        background-color: rgba(212, 175, 55, 0.1); /* Dá um leve fundo para destacar */
+    }
+
     .hero-content h1 {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
+    
     .booking-form .form-row {
         grid-template-columns: 1fr;
         gap: 0;
     }
+    
     .footer-content {
         flex-direction: column;
         text-align: center;
